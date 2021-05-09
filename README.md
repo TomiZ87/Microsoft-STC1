@@ -1,9 +1,9 @@
 # Microsoft ŠTC - Študenstké Trénerské Centrum Microsoft
 
 Hello and welcome to my Microsoft Student Trainee Center Repository. <br>
-This repository was created to complete and work on assigment of the earlier mentioned programme.<br><br>
+This repository was created to complete and work on assigments of the earlier mentioned programme.<br><br>
 
-Work/Assginment:<br>
+Works/Assginments:<br>
 <ol>
   <li>MSLearn and GitHub:</li><br>
   <ul>
@@ -14,7 +14,7 @@ Work/Assginment:<br>
 
 SK:<br>
 Ahojte a vitajte v mojom úložisku Študentského Trénerského Centra Microsoft.<br>
-Toto úložisko bolo vytvorené pre prácu spojenú so ŠTC Microsoft.<br><br>
+Toto úložisko bolo vytvorené pre práce spojené so ŠTC Microsoft.<br><br>
 
 Práce/Zadania:<br>
 <ol>
