@@ -8,6 +8,7 @@ Works/Assginments:<br>
   <li>MSLearn and GitHub:</li><br>
   <ul>
    <li>I have done this Learning Path: https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/</li><br>
+    <li>Learning Path: <b>Take your first steps with C#</b></li><br>
    <li>My MSLearn profile (personal profile linked with ŠTC): https://docs.microsoft.com/en-us/users/tomzajic-0717/achievements?source=docs</li><br><br>
   </ul>  
 </ol>
@@ -21,6 +22,7 @@ Práce/Zadania:<br>
   <li>MSLearn a GitHub:</li><br>
   <ul>
     <li>Dokončil som tento študijný plán: https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/</li><br>
+    <li>Študijný program: <b>Take your first steps with C#</b></li><br>
     <li>Môj MSLearn profil (osobný, ktorý je prepojený s ŠTC profilom): https://docs.microsoft.com/en-us/users/tomzajic-0717/achievements?source=docs</li><br><br>
   </ul>
 </ol>
