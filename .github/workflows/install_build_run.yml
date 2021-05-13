@@ -1,0 +1,23 @@
+name: Install, build and run nodejs app
+ 
+on:
+  push:
+    branches: [ node-project ]
+ 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Node.js version
+        uses: <Sem doplnte GitHub Action>
+        with:
+            node-version: '12.x'
+
+      - name: Perform install, build and start commands
+        run: |
+            npm install
+            tsc
+            npm run start --if-present
