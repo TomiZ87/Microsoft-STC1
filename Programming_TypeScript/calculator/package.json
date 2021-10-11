@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomiZ87/Microsoft-STC1/tree/main/Programming_TypeScript/calculator"
+  },
+  "author": "Tom Zajíc",
+  "license": "ISC",
+  "dependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.4.3"
+  }
+}
