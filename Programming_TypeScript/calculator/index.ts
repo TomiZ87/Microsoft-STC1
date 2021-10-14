@@ -28,8 +28,6 @@ switch(operator) //After all necessary data is taken, I used the switch to decid
 
 }
 
-
-
 // The code below is a fail while coding the one line calculator and analyzing the equation
 /*
 let myString = "5+4";
