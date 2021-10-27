@@ -1,4 +1,4 @@
-const MAX_SAFE_INTEGER = 1000;// 9007199254740991;
+const MAX_SAFE_INTEGER = 9007199254740991;
 let numArray: number[] = [];
 let evenNumArray: number[] = [];
 let evenNumArray4: number[] = [];
@@ -51,11 +51,16 @@ function primeNumbers (fromArray:number[], resultArray: number[], numOfRepeats: 
 { 
     for (let i: number = 0; i <= numOfRepeats; i++)
     {
-        for (let j: number = 3; j < fromArray[i]; j+2) {
-            if(fromArray[i] % j != 0 )
+        let isPrime = true;
+        for (let j: number = 2; j * j < fromArray[i]; j++) {
+            if(fromArray[i] % j == 0 )
             {
-                resultArray.push(fromArray[i]);
-            } 
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            resultArray.push(fromArray[i]); 
         }
     }
     return resultArray;
