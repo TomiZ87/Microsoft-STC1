@@ -10,7 +10,7 @@ class division {
      * @param numOfRepeats - the number of how many times has the loop repeat, usually it is the lenght of a fromArray (fromArray.lenght)
      * @param remainder - the number determine which remainder (how many has to remain) has to result by dividing the number (divider)
      * @param divider - the number by which will be the values divided (tested for)
-     * @returns 
+     * @returns - returns the array with filtered numbers/elements
      */
     public static divisionNum(fromArray: number[], resultArray: number[], numOfRepeats: number, remainder: number, divider: number) {
         for (let i: number = 0; i <= numOfRepeats; i++)
@@ -24,10 +24,12 @@ class division {
     }
     /**
      * The function filters the prime numbers from an array and adds them to the resultArray
+     * The prime number determined by dividing the number from 2 until the number value (let j: number = 2; j * j < fromArray[i]). 
+     * If in every division/case results with remainder, then the number is prime. 
      * @param fromArray - the array from which are the initial values filtered
      * @param resultArray - array to where will be the filtered values added
      * @param numOfRepeats  - the number of how many times has the loop repeat, usually it is the lenght of a fromArray (fromArray.lenght)
-     * @returns 
+     * @returns - returns the array with prime numbers
      */
     public static primeNumbers (fromArray:number[], resultArray: number[], numOfRepeats: number)
     { 
