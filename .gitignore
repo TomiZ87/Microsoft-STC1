@@ -2,4 +2,6 @@ Programming_TypeScript/calculator/node_modules/
 Programming_TypeScript/calculator/build
 Programming_TypeScript/generator/node_modules/
 Programming_TypeScript/generator/build
+Programming_TypeScript/book_reader/node_modules/
+Programming_TypeScript/book_reader/build
 .env
