@@ -1,0 +1,11 @@
+[ 
+    {
+        "id": 1,
+        "name": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "genre": "magic",
+        "published": 1997,
+        "publisher": "Bloomsbury",
+        "pages": 223
+    }
+]
