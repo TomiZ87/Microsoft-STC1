@@ -5,6 +5,7 @@ export type Book = {
     genre: string[]
     published: number
     publisher: string
+    origin_country: string
     pages: number
 }
 

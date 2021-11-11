@@ -4,11 +4,10 @@ import bodyParser, { json, urlencoded} from "body-parser";
 import http from "http";
 import fs from "fs";
 import {Book, Book_Short} from "./book_properties";
-import { isBlockScopedBindingElement } from "tslint";
 
 let app
 const importedFile = fs.readFileSync("src/Input/books.json")
-const myJSON: Book_Short[] = JSON.parse(importedFile.toString())
+const myJSON: Book[] = JSON.parse(importedFile.toString())
 
 let myMap = new Map()
 myJSON.forEach((book: Book_Short) => myMap.set(book.id,<Book_Short> book))
@@ -42,6 +41,7 @@ function createserver() {
             res.json({ id: "Error: NO book found on this id"})
         }
     })
+
     app.post("/api/library/book/:id/info", (req, res) => {
         const id = req.params["id"]
         let tempid = parseInt(id)
@@ -53,7 +53,6 @@ function createserver() {
             res.json({ id: "Error: NO book found on this id"})
         }
     })
-    //app.post
 }
 createserver()
 
