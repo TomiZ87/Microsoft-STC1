@@ -1,102 +1,154 @@
-[ 
-    {
-        "id": 1,
-        "name": "Harry Potter and the Philosopher's Stone",
-        "author": ["J.K. Rowling"],
-        "genre": ["fantasy"],
-        "published": 1997,
-        "publisher": "Bloomsbury",
-        "origin_country": "United Kingdom",
-        "pages": 223
-    },
-    {
-        "id": 2,
-        "name": "Jujutsu Kaisen (呪術廻戦) vol. 1",
-        "author": ["Gege Akutami"],
-        "genre": ["manga", "shonen", "graphic novel"],
-        "published": 2018,
-        "publisher": "Shueisha",
-        "origin_country": "Japan",
-        "pages": 192
-    },
-    {
-        "id": 3,
-        "name": "My Hero Acamia: Izuku Midoriya: Origin (緑谷出久：オリジン) vol. 1",
-        "author": ["Kohei Horikoshi"],
-        "genre": ["manga", "shonen", "graphic novel"],
-        "published": 2014,
-        "publisher": "VIZ Media/Sueisha",
-        "origin_country": "United Kingdom",
-        "pages": 192
-    },
-    {
-        "id": 4,
-        "name": "The Compound Effect",
-        "author": ["Darren Hardy"],
-        "genre": ["motivational literature", "economics", "business"],
-        "published": 2010,
-        "publisher": "Hachette Books",
-        "origin_country": "United States of America",
-        "pages": 176
-    },
-    {
-        "id": 5,
-        "name": "The Lord of the Rings: The Fellowship of the Ring",
-        "author": ["J.R.R. Tolkien"],
-        "genre": ["fantasy"],
-        "published": 1954,
-        "publisher": "Allen & Unwin",
-        "origin_country": "United Kingdom",
-        "pages": 423
-    },
-    {
-        "id": 6,
-        "name": "StarTrek Destiny: Gods of Night",
-        "author": ["David Alan Mack"],
-        "genre": ["sci-fi"],
-        "published": 2008,
-        "publisher": "Pocket Books",
-        "origin_country": "Simon & Schuster/Pocket Books",
-        "pages": 400
-    },
-    {
-        "id": 7,
-        "name": "Murder on the Orient Express",
-        "author": ["Agatha Christie"],
-        "genre": ["detective", "mystery", "crime"],
-        "published": 1934,
-        "publisher": "Collins Crime Club",
-        "origin_country": "United Kingdom",
-        "pages": 288
-    },
-    {
-        "id": 8,
-        "name": "The Hound of the Baskervilles",
-        "author": ["Arthur Conan Doyle"],
-        "genre": ["detective", "mystery", "crime"],
-        "published": 1902,
-        "publisher": "Grosset & Dunlap",
-        "origin_country": "United Kingdom",
-        "pages": 248
-    },
-    {
-        "id": 9,
-        "name": "The Da Vinci Code",
-        "author": ["Dan Brown"],
-        "genre": ["crime", "detective", "mystery"],
-        "published": 2003,
-        "publisher": "Doubleday",
-        "origin_country": "United States of America",
-        "pages": 689
-    },
-    {
-        "id": 10,
-        "name": "Fifty Shades of Grey",
-        "author": ["E. L. James"],
-        "genre": ["romance"],
-        "published": 2011,
-        "publisher": "Vintage Books",
-        "origin_country": "United Kingdom",
-        "pages": 514
-    }
+[
+  {
+    "id": 1,
+    "name": "Harry Potter and the Philosopher's Stone",
+    "author": [
+      "J.K. Rowling"
+    ],
+    "genre": [
+      "fantasy"
+    ],
+    "published": 1997,
+    "publisher": "Bloomsbury",
+    "origin_country": "United Kingdom",
+    "pages": 223
+  },
+  {
+    "id": 2,
+    "name": "Jujutsu Kaisen (呪術廻戦) vol. 1",
+    "author": [
+      "Gege Akutami"
+    ],
+    "genre": [
+      "manga",
+      "shonen",
+      "graphic novel"
+    ],
+    "published": 2018,
+    "publisher": "Shueisha",
+    "origin_country": "Japan",
+    "pages": 192
+  },
+  {
+    "id": 3,
+    "name": "My Hero Acamia: Izuku Midoriya: Origin (緑谷出久：オリジン) vol. 1",
+    "author": [
+      "Kohei Horikoshi"
+    ],
+    "genre": [
+      "manga",
+      "shonen",
+      "graphic novel"
+    ],
+    "published": 2014,
+    "publisher": "VIZ Media/Sueisha",
+    "origin_country": "United Kingdom",
+    "pages": 192
+  },
+  {
+    "id": 4,
+    "name": "The Compound Effect",
+    "author": [
+      "Darren Hardy"
+    ],
+    "genre": [
+      "motivational literature",
+      "economics",
+      "business"
+    ],
+    "published": 2010,
+    "publisher": "Hachette Books",
+    "origin_country": "United States of America",
+    "pages": 176
+  },
+  {
+    "id": 5,
+    "name": "The Lord of the Rings: The Fellowship of the Ring",
+    "author": [
+      "J.R.R. Tolkien"
+    ],
+    "genre": [
+      "fantasy"
+    ],
+    "published": 1954,
+    "publisher": "Allen & Unwin",
+    "origin_country": "United Kingdom",
+    "pages": 423
+  },
+  {
+    "id": 6,
+    "name": "StarTrek Destiny: Gods of Night",
+    "author": [
+      "David Alan Mack"
+    ],
+    "genre": [
+      "sci-fi"
+    ],
+    "published": 2008,
+    "publisher": "Pocket Books",
+    "origin_country": "Simon & Schuster/Pocket Books",
+    "pages": 400
+  },
+  {
+    "id": 7,
+    "name": "Murder on the Orient Express",
+    "author": [
+      "Agatha Christie"
+    ],
+    "genre": [
+      "detective",
+      "mystery",
+      "crime"
+    ],
+    "published": 1934,
+    "publisher": "Collins Crime Club",
+    "origin_country": "United Kingdom",
+    "pages": 288
+  },
+  {
+    "id": 8,
+    "name": "The Hound of the Baskervilles",
+    "author": [
+      "Arthur Conan Doyle"
+    ],
+    "genre": [
+      "detective",
+      "mystery",
+      "crime"
+    ],
+    "published": 1902,
+    "publisher": "Grosset & Dunlap",
+    "origin_country": "United Kingdom",
+    "pages": 248
+  },
+  {
+    "id": 9,
+    "name": "The Da Vinci Code",
+    "author": [
+      "Dan Brown"
+    ],
+    "genre": [
+      "crime",
+      "detective",
+      "mystery"
+    ],
+    "published": 2003,
+    "publisher": "Doubleday",
+    "origin_country": "United States of America",
+    "pages": 689
+  },
+  {
+    "id": 10,
+    "name": "Fifty Shades of Grey",
+    "author": [
+      "E. L. James"
+    ],
+    "genre": [
+      "romance"
+    ],
+    "published": 2011,
+    "publisher": "Vintage Books",
+    "origin_country": "United Kingdom",
+    "pages": 514
+  }
 ]
