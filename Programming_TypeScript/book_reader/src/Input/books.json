@@ -150,5 +150,19 @@
     "publisher": "Vintage Books",
     "origin_country": "United Kingdom",
     "pages": 514
+  },
+  {
+    "id": 11,
+    "name": "Star Trek: Picard: The Last Best Hope",
+    "author": [
+      "Una McCormack"
+    ],
+    "genre": [
+      "sci-fi"
+    ],
+    "published": 2020,
+    "publisher": "Gallery Books",
+    "origin_country": "United States of America",
+    "pages": 336
   }
 ]

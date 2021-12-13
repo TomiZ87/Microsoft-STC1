@@ -89,7 +89,7 @@ function createserver() {
 
     app.put("/api/library/book/add", (req, res) => {
         updateMap();
-        let tempid = myJSON.length;
+        let tempid = myJSON.length+1;
         myJSON.push(
         {
             id: tempid,
