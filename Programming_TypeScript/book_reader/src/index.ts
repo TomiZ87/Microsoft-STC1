@@ -5,12 +5,17 @@ import http from "http";
 import fs from "fs";
 import {Book, Book_Short} from "./book_properties";
 
+/** Reading from JSON file and mapping the JSON*/
 let app = express()
 const myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
 let myMap = new Map()
 myJSON.forEach((book: Book_Short) => myMap.set(book.id,<Book_Short> book))
 console.log(myJSON)
 
+/**
+ * This function reads JSON file and creates a map from it
+ * @returns the updated map for futher use
+ */
 function updateMap() {
     const myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
     let myMap = new Map()
@@ -18,6 +23,9 @@ function updateMap() {
     return myMap
 }
 
+/**
+ *  Creates server/localhost on port 3000 and have methods which will be used for API
+ */
 function createserver() {
     app.use(cors())
     app.use(json())
@@ -27,6 +35,7 @@ function createserver() {
         console.log("Running server on port 3000")
     })
 
+    /** According to the ID in URL, it gets you the the short info of that book with that ID*/
     app.get("/api/library/book/:id/info", (req, res) => {
         updateMap()
         const id = req.params["id"]
@@ -46,6 +55,7 @@ function createserver() {
         }
     })
 
+    /** According to the ID in URL, it gets you the the full info of that book with that ID*/
     app.post("/api/library/book/:id/info", (req, res) => {
         updateMap()
         const id = req.params["id"]
@@ -59,8 +69,8 @@ function createserver() {
         }
     })
 
+    /**After entering the parameter "name" = anyting, can search in the array of books by name */
     app.post("/api/library/book/find/name", (req, res) => {
-        updateMap()
         let searchingterm = req.body["name"]
         var result_array: Book[] = []
         for(let i = 0; i < myJSON.length; i++){
@@ -69,15 +79,15 @@ function createserver() {
             }
         }
         console.log(result_array)
-        if (result_array === []){
-            res.json({ message: "These books were found: ", result_array})
+        if (result_array.length > 0){
+            res.json(result_array)
         } else {
             res.json({ message: "Your search did not match any book."})
         }
     })
     
+    /**After entering the parameter "name" = anyting, can search in the array of books by author*/
     app.post("/api/library/book/find/author", (req, res) => {
-        updateMap()
         let searchingterm = req.body["name"]
         var result_array: Book[] = []
         for(let i = 0; i < myJSON.length; i++){
@@ -86,15 +96,15 @@ function createserver() {
             }
         }
         console.log(result_array)
-        if (result_array === []){
-            res.json({ message: "These books were found: ", result_array})
+        if (result_array.length > 0){
+            res.json(result_array)
         } else {
             res.json({ message: "Your search did not match any book."})
         }
     })
 
+    /**This method can add json object into the array of json objects (the book properties) */
     app.put("/api/library/book/add", (req, res) => {
-        updateMap();
         let tempid = myJSON.length+1;
         myJSON.push(
         {
@@ -109,8 +119,11 @@ function createserver() {
         }
         )
         fs.writeFileSync("src/Input/books.json", (JSON.stringify(myJSON, null, 2)));
+        updateMap();
         res.json({ message: "The following book was successfully added!", id: myJSON[myJSON.length - 1]})
     })
+
+    /**This method deletes the element from array of books by the ID in URL if it exists */
     app.delete("/api/library/book/:id/delete", (req, res) => {
         updateMap()
         const id = req.params["id"]
