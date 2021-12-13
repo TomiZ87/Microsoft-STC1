@@ -7,10 +7,8 @@ import {Book, Book_Short} from "./book_properties";
 
 let app = express()
 const myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
-
 let myMap = new Map()
 myJSON.forEach((book: Book_Short) => myMap.set(book.id,<Book_Short> book))
-
 console.log(myJSON)
 
 function updateMap() {
@@ -71,7 +69,11 @@ function createserver() {
             }
         }
         console.log(result_array)
-        res.json(result_array)
+        if (result_array === []){
+            res.json({ message: "These books were found: ", result_array})
+        } else {
+            res.json({ message: "Your search did not match any book."})
+        }
     })
     
     app.post("/api/library/book/find/author", (req, res) => {
@@ -84,7 +86,11 @@ function createserver() {
             }
         }
         console.log(result_array)
-        res.json(result_array)
+        if (result_array === []){
+            res.json({ message: "These books were found: ", result_array})
+        } else {
+            res.json({ message: "Your search did not match any book."})
+        }
     })
 
     app.put("/api/library/book/add", (req, res) => {
