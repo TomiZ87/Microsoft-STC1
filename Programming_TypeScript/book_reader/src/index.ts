@@ -7,7 +7,7 @@ import {Book, Book_Short} from "./book_properties";
 
 /** Reading from JSON file and mapping the JSON*/
 let app = express()
-const myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
+let myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
 let myMap = new Map()
 myJSON.forEach((book: Book_Short) => myMap.set(book.id,<Book_Short> book))
 console.log(myJSON)
@@ -17,7 +17,7 @@ console.log(myJSON)
  * @returns the updated map for futher use
  */
 function updateMap() {
-    const myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
+    let myJSON: Book[] = JSON.parse(fs.readFileSync(("src/Input/books.json")).toString())
     let myMap = new Map()
     myJSON.forEach((book: Book_Short) => myMap.set(book.id,<Book_Short> book))
     return myMap
@@ -37,7 +37,6 @@ function createserver() {
 
     /** According to the ID in URL, it gets you the the short info of that book with that ID*/
     app.get("/api/library/book/:id/info", (req, res) => {
-        updateMap()
         const id = req.params["id"]
         let tempid = parseInt(id)
         if (myMap.has(tempid)) {
@@ -57,7 +56,6 @@ function createserver() {
 
     /** According to the ID in URL, it gets you the the full info of that book with that ID*/
     app.post("/api/library/book/:id/info", (req, res) => {
-        updateMap()
         const id = req.params["id"]
         let tempid = parseInt(id)
         if (myMap.has(tempid)) {
@@ -105,7 +103,11 @@ function createserver() {
 
     /**This method can add json object into the array of json objects (the book properties) */
     app.put("/api/library/book/add", (req, res) => {
-        let tempid = myJSON.length+1;
+        //let tempid = myJSON.length+1;
+        let tempid: number = 0;
+        while (myMap.has(tempid)) {
+            tempid++;
+        } 
         myJSON.push(
         {
             id: tempid,
@@ -118,9 +120,12 @@ function createserver() {
             pages: req.body["pages"]
         }
         )
-        fs.writeFileSync("src/Input/books.json", (JSON.stringify(myJSON, null, 2)));
+        let x = myJSON.sort((a, b) => (a.id > b.id ? 1 : -1));
+        //fs.writeFileSync("src/Input/books.json", (JSON.stringify(myJSON, null, 2)));
+        fs.writeFileSync("src/Input/books.json", (JSON.stringify(x, null, 2)));
         updateMap();
-        res.json({ message: "The following book was successfully added!", id: myJSON[myJSON.length - 1]})
+        //res.json({ message: "The following book was successfully added!", id: myJSON[myJSON.length - 1]})
+        res.json({ message: "The following book was successfully added!", id: x[tempid-1]})
     })
 
     /**This method deletes the element from array of books by the ID in URL if it exists */
